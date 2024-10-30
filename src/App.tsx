@@ -1,18 +1,21 @@
 import Navbar from './components/Navbar/Navbar.js'
-import Announcement from './components/Announcement/Announcement.js'
 import Footer from './components/Footer/Footer.js'
 import './App.css'
-import MapComponent from './components/Mapping/MapComponent.js'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/home/Home.js'
+import Readings from './pages/readings/Readings.js'
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Announcement />
-      <MapComponent />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/readings" element={<Readings />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

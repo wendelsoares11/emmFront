@@ -1,12 +1,9 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import emmLogo from '../../../public/logos/emmLogo.png';
+import { Link, useLocation } from 'react-router-dom';
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
+
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ')
@@ -17,6 +14,16 @@ const classNames = (...classes: string[]) => {
 }*/
 
 export default function Navbar() {
+  const location = useLocation();
+
+  const navigation = [
+    { name: 'Home', href: '/', current: location.pathname === '/'? true : false },
+    { name: 'Leituras', href: '/readings', current: location.pathname === '/readings'? true : false },
+    { name: 'Em desenvolvimento', href: '#', current: false },
+  ]
+
+
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -34,16 +41,16 @@ export default function Navbar() {
             <div className="flex flex-shrink-0 items-center">
               <img
                 alt="Your Company"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
+                src={emmLogo}
+                className="h-11 w-auto"
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
@@ -51,7 +58,7 @@ export default function Navbar() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
