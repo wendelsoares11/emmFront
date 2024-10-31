@@ -1,4 +1,4 @@
-import softexPernambucoLogo from '../../../public/logos/softexPernambucoLogo.png'
+import softexPernambucoLogo from '../../assets/logos/softexPernambucoLogo.png';
 
 
 export default function Footer() {
