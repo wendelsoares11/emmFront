@@ -1,34 +1,15 @@
-
-import { useParams } from 'react-router-dom'
-import BarChart from '../../components/Charts/BarChart/Barchart'
-import useFetch from '../../hooks/useFetch';
-
-
-interface DataType {
-  id: number;
-  name: string;
-}
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Readings() {
-  const { id } = useParams();
-  const token = import.meta.env.VITE_API_TOKEN;
-  const apiUrl = import.meta.env.VITE_API_URL_STATIONS_ID;
-
-  const { data, loading, error } = useFetch<DataType[]>(
-    `${apiUrl}${id}`, 
-    token
-  );
-
-  if (loading) return <p>Carregando...</p>;
-  if (error) return <p>Erro ao carregar os dados: {error.message}</p>;
-
   return (
     <div>
-        <h1>Gráfico {id}</h1>
-        {data && (
-          <h1>Dados carregados da api</h1>
-        )}
-        <BarChart />
+        <h1>Reading Page</h1>
+        <p>This is the Reading Page</p>
+        <div className='flex flex-col justify-center'>
+            <Link to='/readings/1' className='m-1 p-1 border- bg-slate-200'>Ir para readings 1</Link>
+            <Link to='/readings/3' className='m-1 p-1 border- bg-slate-400'>Ir para readings 3</Link>
+        </div>
     </div>
   )
 }
