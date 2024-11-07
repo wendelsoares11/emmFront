@@ -38,7 +38,10 @@ export default function Home() {
         <div className="p-4 bg-blue-50 mt-4">
           <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-4">
             <h2 className="text-xl font-bold mb-2">Nossos Projetos</h2>
-            <p className="text-gray-600">Conteúdo sobre nossos projetos...</p>
+            <p className="text-gray-600">Aqui você pode conhecer mais sobre os nossos projetos incríveis e como estamos impactando a comunidade.</p>
+            <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+              Ver Projetos
+            </button>
           </div>
         </div>
       )}
@@ -46,7 +49,10 @@ export default function Home() {
         <div className="p-4 bg-blue-50 mt-4">
           <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-4">
             <h2 className="text-xl font-bold mb-2">Como Participar</h2>
-            <p className="text-gray-600">Informações sobre como participar...</p>
+            <p className="text-gray-600">Saiba como você pode se envolver, colaborar e fazer parte da nossa comunidade de projetos.</p>
+            <button className="mt-4 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+              Participar Agora
+            </button>
           </div>
         </div>
       )}
@@ -59,7 +65,7 @@ export default function Home() {
               pulvinar sagittis id imperdiet sapien amet...
             </p>
             <button className="mt-4 bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600">
-              Ver artigos
+              Ver Artigos
             </button>
           </div>
         </div>
