@@ -38,6 +38,7 @@ export default function Home() {
         <div className="p-4 bg-blue-50 mt-4">
           <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-4">
             <h2 className="text-xl font-bold mb-2">Nossos Projetos</h2>
+            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nossos Projetos" className="w-full h-48 object-cover rounded-md mb-4" />
             <p className="text-gray-600">Aqui você pode conhecer mais sobre os nossos projetos incríveis e como estamos impactando a comunidade.</p>
             <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
               Ver Projetos
@@ -49,6 +50,7 @@ export default function Home() {
         <div className="p-4 bg-blue-50 mt-4">
           <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-4">
             <h2 className="text-xl font-bold mb-2">Como Participar</h2>
+            <img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Como Participar" className="w-full h-48 object-cover rounded-md mb-4" />
             <p className="text-gray-600">Saiba como você pode se envolver, colaborar e fazer parte da nossa comunidade de projetos.</p>
             <button className="mt-4 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
               Participar Agora
@@ -60,6 +62,7 @@ export default function Home() {
         <div className="p-4 bg-blue-50 mt-4">
           <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-4">
             <h2 className="text-xl font-bold mb-2">Artigos</h2>
+            <img src="https://images.pexels.com/photos/3760096/pexels-photo-3760096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Artigos" className="w-full h-48 object-cover rounded-md mb-4" />
             <p className="text-gray-600">
               Lorem ipsum dolor sit amet consectetur. Faucibus volutpat purus nisl massa. Egestas odio sagittis 
               pulvinar sagittis id imperdiet sapien amet...
