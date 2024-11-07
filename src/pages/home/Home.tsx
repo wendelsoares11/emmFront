@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Announcement from '../../components/Announcement/Announcement';
 import MapComponent from '../../components/Mapping/MapComponent';
+import { CardComponent } from '../../components/Card/CardComponent';
 
 export default function Home() {
   // Estado para controlar qual seção exibir
@@ -10,9 +11,24 @@ export default function Home() {
     <div>
       <Announcement />
       <MapComponent />
+      <CardComponent 
+        title='Pessoas conversando'
+        description='Duas pessoas trocam ideias em uma conversa animada e envolvente. O diálogo é uma das formas mais poderosas de conexão, permitindo a troca de histórias, experiências e novas perspectivas.' 
+        imgUrl='https://miro.medium.com/v2/resize:fit:1200/1*MI1KEoh0jC6766EIUvPEWw.jpeg'
+      />
+      <CardComponent 
+        title='Gato aleatório'
+        description='Este adorável gato descansa tranquilamente, observando o mundo com seus olhos curiosos. Os gatos são conhecidos por sua independência, charme e por serem companheiros fiéis nos momentos de relaxamento.' 
+        imgUrl='https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      />
+      <CardComponent 
+        title='Espaço'
+        description='Quando olhamos para o espaço, nos deparamos com uma vastidão inimaginável, repleta de estrelas, galáxias e mistérios. O universo é imenso e ainda em grande parte inexplorado, nos lembrando de como somos pequenos diante de sua grandiosidade e das infinitas possibilidades que ele guarda.' 
+        imgUrl='https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      />
 
       {/* Botões para alternar entre seções */}
-      <div className="flex justify-center gap-4 my-4">
+      {/*<div className="flex justify-center gap-4 my-4">
         <button
           onClick={() => setActiveSection('projetos')}
           className={`py-2 px-4 rounded ${activeSection === 'projetos' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'}`}
@@ -31,9 +47,9 @@ export default function Home() {
         >
           Artigos
         </button>
-      </div>
+      </div>*/}
 
-      {/* Renderização condicional com base no estado */}
+      {/* Renderização condicional com base no estado 
       {activeSection === 'projetos' && (
         <div className="p-4 bg-blue-50 mt-4">
           <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-4">
@@ -72,7 +88,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      )}
+      )}*/}
     </div>
   );
 }
